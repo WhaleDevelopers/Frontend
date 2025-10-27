@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+memo.txt
+openapi.json
+
+/src/common/hooks/client/generated/
+
+/src/common/hooks/urlManager.js
+/src/common/hooks/apiBaseURL.js

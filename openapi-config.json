@@ -1,0 +1,7 @@
+{
+  "apiPackage": "api",
+  "modelPackage": "model",
+  "typeMappings": {
+    "ObjectId": "string"
+  }
+}
