@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Whale Developers
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**요약: "Flutter와 Spring Boot로 구현한 면접 질문 연습용 모바일 애플리케이션”**
 
-## Available Scripts
+**개발 기간: “2025. 09.14 ~ 10.27”**
 
-In the project directory, you can run:
+**핵심 기술 스택:**  Flutter+Dart, Spring Boot, Java21, MongoDB, cloudflared
 
-### `npm start`
+---
+### ⚡ App apk file : 추후 추가
+### 💿 Demo Video: [youtube.com](https://www.youtube.com/shorts/42vOmymjEV8?feature=share)
+### 📖 More Info: [notion.com](https://dot-woodwind-39a.notion.site/whale-devs-299303eae1f280a9a4f3d8a54a042f1f)
+### 🙆‍♂️ 개발자 포트폴리오 [notion.com](https://www.notion.so/PORTFOLIO-19e303eae1f280828d69f4b34a9654a7)
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📖 소개
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+신입 개발자를 위한 기술 면접 연습용 모바일 애플리케이션 프로젝트입니다.
 
-### `npm test`
+사용자는 카테고리(Java,Spring..)를 선택하여 랜덤한 문제 5개를 풀어 볼 수 있습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+🗺️ 시스템 아키텍처 (Architecture)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="1241" height="844" alt="image" src="https://github.com/user-attachments/assets/d5871c42-d605-44f3-b4a3-3b53f419d13a" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+구성 설명 :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+1. 읽기 중심(Read-Heavy) 서비스에 최적화된 MongoDB 사용
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. 사용자용(Flutter)과 관리자용(React) 클라이언트의 역할을 분리
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. SQLite를 이용한 오프라인 학습 환경 지원 (Offline-first)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. `cloudflared`를 활용한 비용 효율적인 배포
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### 🚀 주요 기능
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[ Flutter App ]
+- 질문 연습 : 랜덤 질문 뽑기, 결과 확인
+- 기록      : 풀었던 문제 확인
+<img width="2048" height="990" alt="image" src="https://github.com/user-attachments/assets/b6d7faf6-7cb2-4f1e-a41f-9cb96a1b5399" />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+[ React Web (Admin) ]
+- 데이터 관리 (CRUD) : 면접 질문 및 카테고리 생성
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[ Server Spring boot ]
+- API 제공 : Flutter와 React에 필요한 데이터 JSON 형태로 제공
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🛠️ 사용 기술 스택
 
-### Making a Progressive Web App
+### 1. Backend (Spring Boot)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Language   :** Java 21
+- **Database    :** MongoDB
+- **API Design :** **RESTful API**
+- **API Documentation :** **OpenAPI** (swagger)
 
-### Advanced Configuration
+### 2. Admin Frontend (React)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **UI Framework :** **MUI (Material-UI)**
+- **Form Management :** **Formik** + **Yup**
+- **API Communication :** Axios
+- **Routing :** React Router DOM
+- **User Feedback :** Notistack (for alerts/snackbars)
 
-### Deployment
+### 3. User App (Flutter)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Language :** Dart
+- **State Management :** **Riverpod**
+- **Routing :** **Go_Router**
+- **Local Database :** **Drift + SQLite**
+- **API Communication :** **Dio** + **Retrofit**
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ⚙️ 배포 환경
+
+- OS: Ubuntu Linux
+- Domain : Cloudflare
+- Hardware: Laptop
